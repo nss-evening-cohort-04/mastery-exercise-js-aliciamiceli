@@ -3,28 +3,27 @@ var characterInput = document.getElementById("character");
 var submit = document.getElementById("submit");
 
 heightInput.addEventListener("input", treeFunction);
-characterInput.addEventListener("input", treeFunction);
+characterInput.addEventListener("input", alertFunction);
 submit.addEventListener("click", submitFunction);
-
-window.addEventListener('keyup', function (e) {
-    if (e.keyCode === 13) {
-     submitFunction();
-  }
-})
 
 
 function treeFunction() {
   var height = heightInput.value;
   var character = characterInput.value;
-  if (heightInput.value === "") {
-    alert("height empty!");
-   } if (characterInput.value === "") {
-    alert("character empty!")
-  } else {
-    console.log("height is " + height);
-    console.log("character is " + character);
+  if (heightInput.value !== "") {
+    console.log("height is " + height)
+
+  } else if (heightInput.value === "") {
+    alert("height is empty!")
   }
 }
+function alertFunction() {
+ if (characterInput.value !== "") {
+    console.log("character is " + character);
+  }  else if (characterInput.value === "")
+    alert("character is empty!")
+  }
+
 
 function actualTreeFunction() {
  var rows = document.getElementById("height").value;
@@ -38,11 +37,16 @@ console.log(actualNbsp.repeat(counter --) + chars.repeat(i * 1.9));
   }
 }
 
-
+window.addEventListener('keyup', function (e) {
+    if (e.keyCode === 13) {
+     submitFunction();
+  }
+})
 
 function submitFunction() {
   actualTreeFunction();
   treeFunction();
+  alertFunction();
 }
 
 
