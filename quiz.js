@@ -19,7 +19,7 @@ function treeFunction() {
 }
 function alertFunction() {
  if (characterInput.value !== "") {
-    console.log("character is " + character);
+    console.log("character is " + characterInput.value);
   }  else if (characterInput.value === "")
     alert("character is empty!")
   }
