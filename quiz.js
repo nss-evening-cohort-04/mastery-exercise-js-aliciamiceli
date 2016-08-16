@@ -10,19 +10,16 @@ submit.addEventListener("click", submitFunction);
 function treeFunction() {
   var height = heightInput.value;
   var character = characterInput.value;
-  if (heightInput.value !== "") {
-    console.log("height is " + height)
-
-  } else if (heightInput.value === "") {
+  if (heightInput.value === "") {
     alert("height is empty!")
   }
 }
+
 function alertFunction() {
- if (characterInput.value !== "") {
-    console.log("character is " + characterInput.value);
-  }  else if (characterInput.value === "")
+ if (characterInput.value === "") {
     alert("character is empty!")
   }
+}
 
 
 function actualTreeFunction() {
